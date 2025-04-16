@@ -1,4 +1,5 @@
 import controllers.MetodosBusqueda;
+import controllers.MetodosdeBusquedaBinaria;
 import models.Person;
 
 public class App {
@@ -14,19 +15,20 @@ public class App {
         personas[6] = new Person( 107, "Pedro");
             
 
-        MetodosBusqueda mb = new MetodosBusqueda(personas);
+        //MetodosBusqueda mb = new MetodosBusqueda(personas);
+        MetodosdeBusquedaBinaria mBB = new MetodosdeBusquedaBinaria(personas);
         
 
         int[] arreglo = {3, 5, 7, 9, 11, 33, 18, 22, 45, 67, 89, 100};
         int valorBuscado = 7;
-        int resultado = mb.busquedaLineal(arreglo, valorBuscado);
+        //int resultado = mb.busquedaLineal(arreglo, valorBuscado);
 
-        if (resultado != -1) {
-            System.out.println("Elemento encontrado en la posición: " + resultado);
-        } else {
-            System.out.println("Elemento no encontrado.");
-        }
+        // if (resultado != -1) {
+        //     System.out.println("Elemento encontrado en la posición: " + resultado);
+        // } else {
+        //     System.out.println("Elemento no encontrado.");
+        // }
+
+        mBB.showPersonByName();
     }
-
-
 }

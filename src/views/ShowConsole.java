@@ -18,4 +18,9 @@ public class ShowConsole{
     public void showMessage(String message){
         System.out.println(message);
     }
+    public String inputName() {
+        System.out.print("Ingrese el nombre: ");
+        scanner.nextLine(); // Consumir el salto de línea pendiente
+        return scanner.nextLine();
+    }
 }
